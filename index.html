@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/Footer-with-logo.css">
+    <title>Desafio include sobre mim</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        #btnTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            height: 50px;
+            width: 50px;
+            color: #fff;
+            background: #333333;
+            border: none;
+            border-radius: 50vh;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+
+        <h1>Quem sou eu? </h1>
+        <div class="imagem-perfil">
+            <img src="mini.jpeg" alt="some text">
+        </div>
+        <br><br>
+
+        <embed src="https://www.youtube.com/embed/VLzd4mVrQg8" allowfullscreen="true" width="425" height="344">
+
+
+
+
+        <br><br>
+        <h1> Por que eu quero fazer parte da Inlude? </h1>
+        <embed src="https://www.youtube.com/embed/XScBvORfIKQ" allowfullscreen="true" width="425" height="344">
+        <br><br>
+
+
+        <h1>Como eu me vejo daqui a 5 anos? </h1>
+        <embed src="https://www.youtube.com/embed/DPNjo0CkSZY" allowfullscreen="true" width="425" height="344">
+
+
+        <br><br>
+
+    </center>
+
+    <button onClick="backToTop()" id="btnTop">Inicio</button>
+    <script>
+        window.onscroll = function() {
+            scroll();
+        }
+
+        function scroll() {
+            let btn = document.getElementById("btnTop");
+            if (document.documentElement.scrollTop > 50) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+
+        function backToTop() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+    <script>
+        function typeWriter(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+                setTimeout(() => elemento.innerHTML += letra, 75 * i);
+            });
+        }
+
+
+
+        const titulo = document.querySelector('h1');
+
+        typeWriter(titulo);
+    </script>
+    <div class="content"></div>
+
+    <footer id="myFooter">
+        <div class="container">
+
+
+        </div>
+        <div class="second-bar">
+            <div class="container">
+
+                <div class="social-icons">
+                    <a href="https://twitter.com/PedroIt51212022" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="https://github.com/pedroita" target="_blank" class="github"><i class="fa fa-github"></i></a>
+                    <a href="https://www.instagram.com/italocampos22/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(77, 118, 255);
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+.imagem-perfil img {
+    width: 180px;
+    display: inline-block;
+    background-color: #aaa;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 4px solid rgb(255, 213, 96);
+}
+
+h1 {
+    max-width: 480px;
+    text-align: center;
+    margin: 60ox auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 255, 255);
+}
+
+h1::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#myFooter {
+    background-color: #2363d3;
+}
+
+#myFooter .row {
+    margin-bottom: 60px;
+}
+
+#myFooter .second-bar {
+    text-align: center;
+    background-color: #2363d3;
+    text-align: center;
+}
+
+#myFooter .second-bar a {
+    font-size: 22px;
+    color: #9fa3a9;
+    padding: 10px;
+    transition: 0.2s;
+    line-height: 68px;
+}
+
+#myFooter .second-bar a:hover {
+    text-decoration: none;
+}
+
+#myFooter .social-icons {
+    float: left;
+}
+
+#myFooter .github:hover {
+    color: #000000;
+}
+
+#myFooter .instagram:hover {
+    color: purple;
+}
+
+#myFooter .twitter:hover {
+    color: #00bbff;
+}
+
+#myFooter .footer-copyright p {
+    margin: 10px;
+    color: #ccc;
+}
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+    #myFooter .info {
+        text-align: center;
+    }
+}
